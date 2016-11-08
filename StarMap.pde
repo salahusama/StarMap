@@ -13,6 +13,7 @@ void setup()
   size(800, 800);
   
   stars = new ArrayList<Star>();
+  loadData();
 }
 
 void draw()
