@@ -23,19 +23,28 @@ void grid()
   
   float x = border;
   float y = border;
+  int label;
   
   // vertical grid lines
+  label = -5;
   while (x <= width - border)
   {
+    text(label, x, border - 10);
     line(x, border, x, height - border);
+    
     x += gridSize;
+    label++;
   }
   
   // horizontal grid lines
+  label = -5;
   while (y <= height - border)
   {
+    text(label, border - 20, y);
     line(border, y, width - border, y);
+    
     y += gridSize;
+    label++;
   }
 }
 
@@ -54,6 +63,9 @@ void plotStars()
     cross(x, y);
     stroke(255, 0, 0);
     ellipse(x, y, size, size);
+    
+    // add star name
+    text(s.name, x + size, y + 2);
   }
 }
 
