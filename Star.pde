@@ -21,8 +21,10 @@ class Star
   /*
   String toString()
   {
-    String data;
-    // use str() fxn to convert primitive data types to strings;
-    return data;
+    String dataRow;
+    
+    String distance, Xg, Yg, Zg, size;
+    dataRow = hab + "\t" + name + "\t" + str(distance) + "\t" + str(Xg) + "\t" + str(Yg) + "\t" + str(Zg)  + "\t" + str(size);
+    return dataRow;
   }*/
 }

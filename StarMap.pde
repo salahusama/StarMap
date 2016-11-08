@@ -9,6 +9,7 @@
 ArrayList<Star> stars;
 
 float border = 50;
+float gridSize = 70; // size of 1 cell = (800 - 100) / 10 calculated by looking at video
 
 void setup()
 {
@@ -22,27 +23,5 @@ void setup()
 void draw()
 {
   grid();
-}
-
-void grid()
-{
-  stroke(200, 0, 150);
-  noFill();
-  
-  float x = border;
-  float y = border;
-  
-  // vertical grid lines
-  while (x <= width - border)
-  {
-    line(x, border, x, height - border);
-    x += 50;
-  }
-  
-  // horizontal grid lines
-  while (y <= height - border)
-  {
-    line(border, y, width - border, y);
-    y += 50;
-  }
+  plotStars();
 }
