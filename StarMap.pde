@@ -8,9 +8,12 @@
 
 ArrayList<Star> stars;
 
+float border = 50;
+
 void setup()
 {
   size(800, 800);
+  background(0);
   
   stars = new ArrayList<Star>();
   loadData();
@@ -18,16 +21,28 @@ void setup()
 
 void draw()
 {
-  //...
+  grid();
 }
 
-void loadData()
+void grid()
 {
-  Table table = loadTable("HabHYG15ly.csv", "header");
+  stroke(200, 0, 150);
+  noFill();
   
-  // get rows
-  for (TableRow row: table.rows())
+  float x = border;
+  float y = border;
+  
+  // vertical grid lines
+  while (x <= width - border)
   {
-    stars.add( new Star(row) );
+    line(x, border, x, height - border);
+    x += 50;
+  }
+  
+  // horizontal grid lines
+  while (y <= height - border)
+  {
+    line(border, y, width - border, y);
+    y += 50;
   }
 }

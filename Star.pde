@@ -10,12 +10,19 @@ class Star
   //
   Star(TableRow row)
   {
-    this.hab = row.getString("hab?");
-    this.name = row.getString("DisplayName");
-    this.distance = row.getFloat("Distance");
-    this.Xg = row.getFloat("Xg");
-    this.Yg = row.getFloat("Yg");
-    this.Zg = row.getFloat("Zg");
-    this.size = row.getFloat("AbsMag");
+    this.hab = row.getString(2);
+    this.name = row.getString(3);
+    this.distance = row.getFloat(12);
+    this.Xg = row.getFloat(13);
+    this.Yg = row.getFloat(14);
+    this.Zg = row.getFloat(15);
+    this.size = row.getFloat(16);
   }
+  /*
+  String toString()
+  {
+    String data;
+    // use str() fxn to convert primitive data types to strings;
+    return data;
+  }*/
 }
